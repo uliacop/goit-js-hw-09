@@ -23,3 +23,61 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  gap: 24px;
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 1280px;
+}
+.gallery-item {
+  width: calc((100% - 48px) / 3);
+}
+.gallery-item:hover {
+  transform: scale(104%);
+}
+
+.feedback-form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: space-around;
+  align-items: center;
+  column-gap: 10px;
+}
+.feedback-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.feedback-form input[type="email"],
+.feedback-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.feedback-form button[type="submit"] {
+  display: block;
+  width:125px;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.feedback-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
