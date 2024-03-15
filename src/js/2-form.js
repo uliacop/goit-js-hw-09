@@ -4,7 +4,7 @@ try {
   form.email.value = (savedState && savedState.email) ?? '';
   form.message.value = (savedState && savedState.message) ?? '';
 } catch (error) {
-  console.log('Error parsing saved state:');
+  console.log('Error parsing saved state');
 }
 
 form.addEventListener('input', () => {
@@ -15,7 +15,7 @@ form.addEventListener('input', () => {
     };
     localStorage.setItem('feedback-form-state', JSON.stringify(formData));
   } catch (error) {
-    console.log('Error saving form data to localStorage:');
+    console.log('Error saving form data to localStorage');
   }
 });
 
@@ -29,9 +29,9 @@ form.addEventListener('submit', (event) => {
       localStorage.removeItem('feedback-form-state');
       form.reset();
     } catch (error) {
-      console.log('Error removing saved state from localStorage:');
+      console.log('Error removing saved state from localStorage');
     }
   } else {
-    alert('Please fill out both email and message fields.');
+    alert('Please fill out both email and message fields');
   }
 });
